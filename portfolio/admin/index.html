@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Alishba Tanveer</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+<style>
+  .lock-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .lock-card { width: 100%; max-width: 380px; }
+  .lock-card input {
+    width: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    margin: 16px 0;
+  }
+  .lock-card input:focus { border-color: var(--blue); }
+  #admin-panel { display: none; }
+  .msg-item { padding: 16px 0; border-bottom: 1px solid var(--border-soft); }
+  .msg-item:last-child { border-bottom: none; }
+  .msg-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<!-- LOCK SCREEN -->
+<div class="lock-screen" id="lock-screen">
+  <div class="card lock-card">
+    <div class="eyebrow">Admin panel</div>
+    <h2 style="font-size:1.4rem;">Enter password</h2>
+    <p style="font-size:0.88rem;">
+      This is a client-side demo gate for local/private use — see the note
+      at the bottom of the panel about what a production version needs.
+    </p>
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password" />
+    <button id="unlock-btn" class="btn btn-primary" style="width:100%; justify-content:center;">Unlock</button>
+    <p id="lock-status" style="margin-top:12px; font-size:0.85rem; color: var(--orange); min-height: 1.2em;"></p>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="brand"><span class="dot"></span>Alishba Tanveer — Admin</a>
+      <button id="lock-btn" class="btn btn-ghost">Lock panel</button>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top: 60px;">
+      <div class="wrap">
+        <div class="eyebrow">Overview</div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Site admin</h1>
+        <p>Enquiries submitted through the contact form on this browser, and a few site-wide toggles.</p>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="wrap grid-2">
+
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">Recent enquiries</h3>
+          <div id="messages"></div>
+          <p id="no-messages" style="display:none; font-size:0.9rem;">No messages yet — they'll appear here after someone submits the contact form on this browser.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">Site status</h3>
+          <div class="field" style="margin-bottom: 18px;">
+            <label style="display:flex; align-items:center; gap:10px; font-size:0.92rem; color: var(--text);">
+              <input type="checkbox" id="maintenance-toggle" style="width:auto;" />
+              Maintenance mode banner
+            </label>
+            <p style="font-size:0.82rem; margin-top:6px;">Stored locally as a flag your pages could check for and display a banner from.</p>
+          </div>
+          <button id="clear-messages" class="btn btn-ghost">Clear saved enquiries</button>
+        </div>
+
+      </div>
+
+      <div class="wrap" style="margin-top: 8px;">
+        <div class="card" style="border-color: var(--orange);">
+          <h3 style="font-size: 1rem; color: var(--orange);">Read before you rely on this panel</h3>
+          <p style="margin:0;">
+            This admin panel is a front-end demo: the password check and
+            the data you see here live entirely in this browser's
+            <code>localStorage</code>, not on a server. That means it's
+            fine for previewing the idea locally, but it is <strong>not
+            secure</strong> — anyone with browser dev tools can bypass the
+            password, and messages don't sync between devices or visitors.
+            A real password-protected admin panel needs a backend (an API
+            with proper authentication, like the Node.js + JWT setup used
+            in Shopsie) and a database to store submissions in. Say the
+            word if you'd like help planning that next.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  /* Demo-only password gate. Change this string, but remember: anything
+     shipped in client-side JS is visible to anyone who opens dev tools. */
+  const ADMIN_PASSWORD = "alishba2026";
+
+  const lockScreen = document.getElementById("lock-screen");
+  const panel = document.getElementById("admin-panel");
+  const pwInput = document.getElementById("pw");
+  const status = document.getElementById("lock-status");
+
+  function unlock() {
+    if (pwInput.value === ADMIN_PASSWORD) {
+      sessionStorage.setItem("admin_unlocked", "1");
+      lockScreen.style.display = "none";
+      panel.style.display = "block";
+      renderMessages();
+    } else {
+      status.textContent = "Incorrect password.";
+    }
+  }
+
+  document.getElementById("unlock-btn").addEventListener("click", unlock);
+  pwInput.addEventListener("keydown", (e) => { if (e.key === "Enter") unlock(); });
+
+  document.getElementById("lock-btn").addEventListener("click", () => {
+    sessionStorage.removeItem("admin_unlocked");
+    location.reload();
+  });
+
+  if (sessionStorage.getItem("admin_unlocked") === "1") {
+    lockScreen.style.display = "none";
+    panel.style.display = "block";
+  }
+
+  function renderMessages() {
+    const list = document.getElementById("messages");
+    const empty = document.getElementById("no-messages");
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem("alishba_messages") || "[]");
+    } catch (e) { items = []; }
+
+    if (!items.length) {
+      empty.style.display = "block";
+      return;
+    }
+    empty.style.display = "none";
+    list.innerHTML = items.map(m => `
+      <div class="msg-item">
+        <div class="msg-meta"><span>${m.name} · ${m.email}</span><span>${new Date(m.date).toLocaleDateString()}</span></div>
+        <div style="font-size:0.9rem;">${m.message}</div>
+      </div>
+    `).join("");
+  }
+
+  document.getElementById("clear-messages").addEventListener("click", () => {
+    localStorage.removeItem("alishba_messages");
+    renderMessages();
+  });
+
+  const maintenanceToggle = document.getElementById("maintenance-toggle");
+  maintenanceToggle.checked = localStorage.getItem("maintenance_mode") === "1";
+  maintenanceToggle.addEventListener("change", () => {
+    localStorage.setItem("maintenance_mode", maintenanceToggle.checked ? "1" : "0");
+  });
+</script>
+
+</body>
+</html>

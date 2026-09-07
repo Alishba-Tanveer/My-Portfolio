@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Alishba Tanveer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  .field { margin-bottom: 20px; }
+  .field label { display:block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; }
+  .field input, .field textarea {
+    width: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+  .field textarea { resize: vertical; min-height: 130px; }
+  .field input:focus, .field textarea:focus { border-color: var(--blue); }
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span>Alishba Tanveer</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="portfolio.html" data-page="portfolio.html">Work</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="services.html" data-page="services.html">Services</a>
+      <a href="awards.html" data-page="awards.html">Awards</a>
+      <a href="contact.html" class="nav-cta" data-page="contact.html">Get in touch</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section style="padding-top: 100px;">
+    <div class="wrap grid-2">
+      <div>
+        <div class="eyebrow reveal">Contact</div>
+        <h1 class="reveal reveal-delay-1" style="font-size: clamp(2.1rem, 5vw, 3rem); max-width: 16ch;">
+          Let's talk about what you're building.
+        </h1>
+        <p class="reveal reveal-delay-2" style="font-size: 1.05rem;">
+          Whether it's a full product, a single feature, or you just want a
+          second opinion on an architecture decision — send a message and
+          I'll get back to you.
+        </p>
+
+        <div class="reveal reveal-delay-2" style="margin-top: 32px; display:flex; flex-direction: column; gap: 14px;">
+          <a href="mailto:alishbatanveer25@gmail.com" class="mono" style="color: var(--text);">
+            alishbatanveer25@gmail.com
+          </a>
+          <a href="tel:+923334128451" class="mono" style="color: var(--text-muted);">
+            +92 333 4128451
+          </a>
+          <a href="https://www.linkedin.com/in/alishba-tanveer" target="_blank" rel="noopener" class="mono" style="color: var(--text-muted);">
+            linkedin.com/in/alishba-tanveer
+          </a>
+          <a href="https://github.com/Alishba-Tanveer" target="_blank" rel="noopener" class="mono" style="color: var(--text-muted);">
+            github.com/Alishba-Tanveer
+          </a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="card reveal reveal-delay-1" action="https://formspree.io/f/xgaenopr" method="POST" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="message">What are you building?</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
+        <p id="form-status" style="margin-top: 14px; font-size: 0.85rem; min-height: 1.2em;"></p>
+        <p style="font-size: 0.78rem; color: var(--text-dim); margin-top: 4px;">
+          Messages sent through this form are delivered straight to
+          Alishba's inbox.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-meta">© 2026 Alishba Tanveer</div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/alishba-tanveer" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Alishba-Tanveer" target="_blank" rel="noopener">GitHub</a>
+      <a href="portfolio.html">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
