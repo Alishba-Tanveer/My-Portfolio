@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alishba Tanveer — Full-Stack Web &amp; Mobile Developer</title>
+<title>Alishba Tanveer | Full-Stack Web &amp; Mobile Developer</title>
 <meta name="description" content="Alishba Tanveer builds full-stack web and mobile products with React, React Native, Node.js and modern databases." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -16,14 +18,14 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand"><span class="dot"></span>Alishba Tanveer</a>
+    <a href="index.html" class="brand"><i class="fa-solid fa-code" style="color: var(--orange);"></i>Alishba Tanveer</a>
     <nav class="nav-links" id="nav-links">
       <a href="index.html" data-page="index.html">Home</a>
       <a href="portfolio.html" data-page="portfolio.html">Work</a>
       <a href="about.html" data-page="about.html">About</a>
       <a href="services.html" data-page="services.html">Services</a>
       <a href="awards.html" data-page="awards.html">Awards</a>
-      <a href="contact.html" class="nav-cta" data-page="contact.html">Get in touch</a>
+      <a href="contact.html" class="btn btn-primary" style="padding: 9px 20px; font-size:0.88rem;" data-page="contact.html">Get in touch ↗</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
@@ -32,88 +34,169 @@
 <main>
 
   <!-- HERO -->
-  <section style="padding-top: 110px; padding-bottom: 80px;">
-    <div class="wrap">
-      <div class="eyebrow reveal">Full-stack developer · MERN Intern @ Coding Pixel</div>
-      <h1 class="reveal reveal-delay-1" style="font-size: clamp(2.4rem, 6vw, 4.4rem); max-width: 15ch;">
-        I build products that work as well on a phone as they do in production.
-      </h1>
-      <p class="reveal reveal-delay-2" style="font-size: 1.15rem; max-width: 56ch; margin-top: 18px;">
-        I'm Alishba Tanveer — a full-stack developer working across
-        <span class="text-orange">React</span>, <span class="text-blue">React Native</span>,
-        Node.js and relational databases. I care about the part most
-        portfolios skip: what happens after the demo, when real people use
-        the thing you built.
-      </p>
-      <div class="reveal reveal-delay-3" style="display:flex; gap:14px; margin-top: 34px; flex-wrap: wrap;">
-        <a href="portfolio.html" class="btn btn-primary">See my work</a>
-        <a href="contact.html" class="btn btn-ghost">Start a project</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- STACK -->
-  <section style="padding-top: 0;">
-    <div class="wrap">
-      <div class="hairline reveal" style="margin-bottom: 56px;"></div>
-      <div class="reveal">
-        <p class="mono" style="color: var(--text-dim); font-size: 0.82rem; letter-spacing: 0.02em; margin-bottom: 22px;">
-          Tools I reach for most
+  <section style="padding-top: 90px; padding-bottom: 40px;">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge reveal"><span class="dot-sm"></span>Full-stack developer</div>
+        <h1 class="reveal reveal-delay-1" style="font-size: clamp(2.3rem, 5.5vw, 4rem); max-width: 15ch; margin-top: 20px;">
+          Hi, I'm <span class="text-orange">Alishba</span>.
+          I build things that work as well on a phone as they do in production.
+        </h1>
+        <p class="reveal reveal-delay-2" style="font-size: 1.1rem; max-width: 54ch; margin-top: 16px; text-align: left;">
+          A full-stack developer working across
+          <span class="text-orange">React</span>, <span class="text-blue">React Native</span>,
+          Node.js and relational databases, currently building on that as a
+          MERN developer at Coding Pixel.
         </p>
+        <div class="reveal reveal-delay-3" style="display:flex; gap:14px; margin-top: 30px; flex-wrap: wrap;">
+          <a href="portfolio.html" class="btn btn-primary">View my work ↗</a>
+          <a href="https://www.linkedin.com/in/alishba-tanveer" target="_blank" rel="noopener" class="btn btn-ghost">View LinkedIn</a>
+        </div>
       </div>
-      <div class="tag-row reveal reveal-delay-1">
-        <span class="pill">React.js</span>
-        <span class="pill">React Native</span>
-        <span class="pill">Next.js</span>
-        <span class="pill">TypeScript</span>
-        <span class="pill">JavaScript (ES6+)</span>
-        <span class="pill">Tailwind CSS</span>
-        <span class="pill">Node.js</span>
-        <span class="pill">Express.js</span>
-        <span class="pill">PostgreSQL</span>
-        <span class="pill">MySQL</span>
-        <span class="pill">Prisma</span>
-        <span class="pill">TypeORM</span>
-        <span class="pill">REST APIs</span>
-        <span class="pill">Firebase / Firestore</span>
-        <span class="pill">HTML5 &amp; CSS3</span>
+
+      <div class="reveal reveal-delay-1" style="position: relative;">
+        <div class="avatar-frame" style="max-width: 320px; margin: 0 auto;">
+          <img src="assets/alishba-closeup.jpeg" alt="Alishba Tanveer" />
+        </div>
+        <div class="float-chip mono" style="top: 4%; left: -8%; animation-delay: 0s;">
+          <span class="dot-sm" style="background: var(--blue); box-shadow: 0 0 8px 1px var(--blue);"></span>
+          React Native
+        </div>
+        <div class="float-chip mono" style="top: 30%; right: -4%; animation-delay: .8s;">
+          <span class="dot-sm"></span>
+          Node.js
+        </div>
+        <div class="float-chip mono" style="bottom: 26%; left: -8%; animation-delay: 1.6s;">
+          <span class="dot-sm" style="background: var(--blue); box-shadow: 0 0 8px 1px var(--blue);"></span>
+          TypeScript
+        </div>
+        <div class="float-chip mono" style="bottom: 4%; right: 5%; animation-delay: 2.4s;">
+          <span class="dot-sm"></span>
+          MySQL
+        </div>
+        <div class="float-chip mono" style="top: -5%; right: 18%; animation-delay: 3.2s;">
+          <span class="dot-sm" style="background: var(--blue); box-shadow: 0 0 8px 1px var(--blue);"></span>
+          Tailwind CSS
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED PROJECT -->
-  <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Featured build</div>
-        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);">Shopsie — turning a shopping list into a route</h2>
-        <p>A final-year project built end to end: React Native app, Node/Express API, and a MySQL database behind it — four different user roles, one connected system.</p>
+  <!-- ABOUT TEASER -->
+  <section style="padding-top: 20px;">
+    <div class="wrap grid-2" style="align-items: center; gap: 56px;">
+      <div class="reveal">
+        <div class="eyebrow">About me</div>
+        <h2 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); max-width: 14ch;">I'm focused on turning real problems into working software</h2>
+        <p style="margin-top: 14px;">
+          A Computer Science graduate currently building on that foundation
+          as a MERN developer, I like projects where the frontend, backend
+          and database all have to agree with each other, and where the
+          result is something a real person actually uses.
+        </p>
+        <a href="about.html" class="btn btn-ghost" style="margin-top: 10px;">Learn more about me →</a>
       </div>
 
-      <div class="card reveal reveal-delay-1" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;">
-        <div>
-          <div class="tag-row" style="margin-bottom: 18px;">
-            <span class="pill">React Native</span>
-            <span class="pill">Expo</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">Prisma</span>
-            <span class="pill">MySQL</span>
-          </div>
-          <p style="margin:0 0 20px;">
-            Shopsie helps people shop in person without the guesswork —
-            building a shopping list, finding nearby shops that actually
-            have what's on it, comparing prices, and routing there with a
-            rider on standby if help is needed carrying it all home.
-          </p>
-          <a href="portfolio.html#shopsie" class="btn btn-ghost">Read the full case study →</a>
+      <div class="stat-inline-grid reveal reveal-delay-1">
+        <div class="stat-inline">
+          <div class="icon-box"><i class="fa-solid fa-people-roof"></i></div>
+          <div><div class="stat-inline-num">4</div><div class="stat-inline-label">User roles built in Shopsie</div></div>
         </div>
-        <div class="mono" style="background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.7;">
-          <div><span class="text-orange">const</span> roles = [</div>
-          <div style="padding-left: 18px;">'Customer', 'Shopkeeper',</div>
-          <div style="padding-left: 18px;">'Rider', 'Admin'</div>
-          <div>];</div>
-          <div style="margin-top:14px;"><span class="text-blue">// </span>maps via Leaflet + WebView</div>
-          <div><span class="text-blue">// </span>auth via JWT · uploads via Multer</div>
+        <div class="stat-inline">
+          <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+          <div><div class="stat-inline-num">3</div><div class="stat-inline-label">Internships &amp; hands-on roles</div></div>
+        </div>
+        <div class="stat-inline">
+          <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+          <div><div class="stat-inline-num">15+</div><div class="stat-inline-label">Tools &amp; technologies used</div></div>
+        </div>
+        <div class="stat-inline">
+          <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+          <div><div class="stat-inline-num">1</div><div class="stat-inline-label">Full-stack app shipped end to end</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="center" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-left:auto; margin-right:auto;">
+        <div class="eyebrow" style="justify-content:center;">My skills</div>
+        <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.4rem);">Technologies I Work With</h2>
+      </div>
+
+      <div class="grid-3" style="text-align:left; grid-template-columns: repeat(3, 1fr);">
+        <div class="reveal">
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-html5-plain colored"></i></div>HTML5</div>
+              <span class="pct">99%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 95%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-css3-plain colored"></i></div>CSS3</div>
+              <span class="pct">97%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 90%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-javascript-plain colored"></i></div>JavaScript</div>
+              <span class="pct">92%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 88%;"></div></div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-react-original colored"></i></div>React.js &amp; React Native</div>
+              <span class="pct">90%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 85%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip mono-icon"><i class="devicon-nextjs-plain"></i></div>Next.js</div>
+              <span class="pct">78%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 78%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-typescript-plain colored"></i></div>TypeScript</div>
+              <span class="pct">80%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 80%;"></div></div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-nodejs-plain colored"></i></div>Node.js &amp; Express</div>
+              <span class="pct">95%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 82%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-tailwindcss-plain colored"></i></div>Tailwind CSS</div>
+              <span class="pct">92%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 85%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top">
+              <div class="skill-item-name"><div class="tech-chip"><i class="devicon-mysql-plain colored"></i></div>SQL &amp; ORMs</div>
+              <span class="pct">78%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="--target: 78%;"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -126,7 +209,7 @@
         <div class="eyebrow">How I work</div>
         <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);">Three things I hold onto on every project</h2>
       </div>
-      <div class="grid-3">
+      <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
         <div class="card reveal">
           <h3 style="font-size: 1.15rem;">One codebase, both platforms</h3>
           <p>Shared logic between web and mobile where it makes sense, so features don't have to be rebuilt twice.</p>
@@ -137,20 +220,31 @@
         </div>
         <div class="card reveal reveal-delay-2">
           <h3 style="font-size: 1.15rem;">Ship it, then watch it</h3>
-          <p>A feature isn't done at merge — it's done once it's live and behaving the way real users need it to.</p>
+          <p>A feature isn't done at merge. It's done once it's live and behaving the way real users need it to.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="center">
+  <section>
     <div class="wrap">
-      <h2 class="reveal" style="font-size: clamp(1.8rem, 4vw, 2.8rem); max-width: 20ch; margin: 0 auto;">
-        Have a product in mind? Let's figure out how to build it.
-      </h2>
-      <div class="reveal reveal-delay-1" style="margin-top: 28px;">
-        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+      <div class="card reveal" style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; padding: 44px; align-items:center;">
+        <div>
+          <div class="eyebrow">Let's work together</div>
+          <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.5rem); max-width: 16ch;">Have a project in mind?</h2>
+          <p style="margin-top: 10px;">Whether it's a full product or a single feature, send a message and I'll get back to you.</p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top: 18px;">Get in touch</a>
+        </div>
+        <div>
+          <p class="mono" style="color: var(--text-dim); font-size: 0.78rem; letter-spacing: 0.04em; margin-bottom: 14px;">FOLLOW ME</p>
+          <div class="social-row" style="margin-bottom: 22px;">
+            <a href="https://github.com/Alishba-Tanveer" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alishba-tanveer" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <p style="margin:0; font-size:0.9rem;">alishbatanveer25@gmail.com</p>
+          <p style="margin:0;">+92 333 4128451</p>
+        </div>
       </div>
     </div>
   </section>

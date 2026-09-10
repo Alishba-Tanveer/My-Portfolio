@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Work — Alishba Tanveer</title>
+<title>Work | Alishba Tanveer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,14 +17,14 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand"><span class="dot"></span>Alishba Tanveer</a>
+    <a href="index.html" class="brand"><i class="fa-solid fa-code" style="color: var(--orange);"></i>Alishba Tanveer</a>
     <nav class="nav-links" id="nav-links">
       <a href="index.html" data-page="index.html">Home</a>
       <a href="portfolio.html" data-page="portfolio.html">Work</a>
       <a href="about.html" data-page="about.html">About</a>
       <a href="services.html" data-page="services.html">Services</a>
       <a href="awards.html" data-page="awards.html">Awards</a>
-      <a href="contact.html" class="nav-cta" data-page="contact.html">Get in touch</a>
+      <a href="contact.html" class="btn btn-primary" style="padding: 9px 20px; font-size:0.88rem;" data-page="contact.html">Get in touch ↗</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
@@ -33,7 +35,7 @@
   <section style="padding-top: 100px; padding-bottom: 40px;">
     <div class="wrap">
       <div class="eyebrow reveal">Selected work</div>
-      <h1 class="reveal reveal-delay-1" style="font-size: clamp(2.2rem, 5vw, 3.4rem); max-width: 18ch;">
+      <h1 class="reveal reveal-delay-1" style="font-size: clamp(2.2rem, 5vw, 3.4rem); max-width: 22ch;">
 Projects I took the whole way to done, and the code I write between them.
       </h1>
     </div>
@@ -53,12 +55,12 @@ Projects I took the whole way to done, and the code I write between them.
           <span class="pill">MySQL</span>
         </div>
 
-        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); max-width: 20ch;">Shopsie — an in-person shopping helper</h2>
-        <p style="font-size: 1.05rem; max-width: 68ch;">
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); max-width: 20ch;">Shopsie (An In-person Shopping Helper App)</h2>
+        <p style="font-size: 1.05rem; max-width: 100ch;">
           Online shopping solved a lot of problems, but not the ones people
           still run into at a physical shop: which one nearby actually
           has what you need, whether the price is fair, and how you're
-          getting a full cart home without a car. Shopsie was my answer —
+          getting a full cart home without a car. Shopsie was my answer:
           a mobile app that treats a shopping trip like a route to be
           planned, not a guess to be made.
         </p>
@@ -75,7 +77,7 @@ Projects I took the whole way to done, and the code I write between them.
           <div>
             <h3 style="font-size: 1.05rem; color: var(--text);">The approach</h3>
             <p>
-              Four connected roles — Customer, Shopkeeper, Rider, Admin —
+              Four connected roles (Customer, Shopkeeper, Rider, Admin)
               each with a purpose-built flow, sharing one backend and one
               source of truth for inventory, pricing, and location.
             </p>
@@ -85,7 +87,7 @@ Projects I took the whole way to done, and the code I write between them.
         <hr class="hairline" style="margin: 36px 0;" />
 
         <h3 style="font-size: 1.05rem; color: var(--text); margin-bottom: 18px;">How each role uses it</h3>
-        <div class="grid-3">
+        <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
           <div>
             <p class="mono" style="color: var(--orange); font-size: 0.8rem; margin-bottom: 6px;">Customer</p>
             <p>Builds a shopping list, discovers nearby shops carrying those items, and compares prices before heading out.</p>
@@ -116,8 +118,58 @@ Projects I took the whole way to done, and the code I write between them.
     </div>
   </section>
 
+  <!-- SHOPSIE SCREEN GALLERY -->
+  <section style="padding-top: 0;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Inside the app</div>
+        <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Shopsie, screen by screen</h2>
+        <p>Every role gets its own flow, tap any screen to view it larger.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="assets/shopsie/auth-role-selection.jpg" alt="Shopsie sign in and role selection screens" />
+          <div class="gallery-caption">Authentication &amp; role selection</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/signup-registration.jpg" alt="Shopsie role-based sign-up screens for customer, rider and shopkeeper" />
+          <div class="gallery-caption">Role-based sign-up</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/customer-dashboard.jpg" alt="Shopsie customer dashboard, shopping list builder, and shop comparison map" />
+          <div class="gallery-caption">Customer dashboard &amp; shopping lists</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/social-route-optimization.jpg" alt="Shopsie friends list and route optimization map" />
+          <div class="gallery-caption">Friends &amp; route optimization</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/rider-dashboard-setup.jpg" alt="Shopsie rider dashboard, account details, and location settings" />
+          <div class="gallery-caption">Rider dashboard &amp; account setup</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/rider-delivery-chat.jpg" alt="Shopsie rider chat, optimized delivery route, and notifications" />
+          <div class="gallery-caption">Rider delivery &amp; chat</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/shopkeeper-inventory.jpg" alt="Shopsie shopkeeper profile and stock entry screens" />
+          <div class="gallery-caption">Shopkeeper profile &amp; stock entry</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/shopkeeper-orders.jpg" alt="Shopsie shopkeeper order approvals, inventory view, and notifications" />
+          <div class="gallery-caption">Order approvals &amp; inventory</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/shopsie/admin-dashboard.jpg" alt="Shopsie admin dashboard, user filtering, and admin management" />
+          <div class="gallery-caption">Admin dashboard &amp; management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- E-COMMERCE PROJECT -->
-  <section style="padding-top: 20px;">
+  <section id="ecommerce" style="padding-top: 20px;">
     <div class="wrap">
       <div class="card reveal" style="padding: 40px;">
         <div class="tag-row" style="margin-bottom: 20px;">
@@ -128,8 +180,8 @@ Projects I took the whole way to done, and the code I write between them.
           <span class="pill">Firestore</span>
         </div>
         <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 22ch;">React e-commerce application</h2>
-        <p style="font-size: 1.02rem; max-width: 66ch;">
-          A React-based online store built at University of Lahore — user
+        <p style="font-size: 1.02rem; max-width: 100ch;">
+          A React-based online store built at University of Lahore, user
           authentication, cart management, and full CRUD functionality for
           products, backed by Firebase and Firestore for data and auth.
           The interface is built with React Hooks and state management
@@ -139,7 +191,7 @@ Projects I took the whole way to done, and the code I write between them.
         <div class="grid-2" style="margin-top: 28px;">
           <div>
             <h3 style="font-size: 1rem; color: var(--text);">What it does</h3>
-            <p>Browse products, manage a cart, sign in and check out — the core loop of a real online store, built from scratch.</p>
+            <p>Browse products, manage a cart, sign in and check out. The core loop of a real online store, built from scratch.</p>
           </div>
           <div>
             <h3 style="font-size: 1rem; color: var(--text);">Built with</h3>
@@ -156,14 +208,14 @@ Projects I took the whole way to done, and the code I write between them.
       <div class="section-head reveal">
         <div class="eyebrow">Also on GitHub</div>
         <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Where I practice between bigger builds</h2>
-        <p>Ongoing coursework and internship sprints — React Hooks, TypeScript, Tailwind, and moving codebases from prototype toward production-grade standards.</p>
+        <p>Ongoing coursework and internship sprints covering React Hooks, TypeScript, Tailwind, and moving codebases from prototype toward production-grade standards.</p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
         <a class="card reveal" href="https://github.com/Alishba-Tanveer/Frontend" target="_blank" rel="noopener">
-          <span class="pill" style="margin-bottom: 14px;">HTML</span>
+          <span class="pill" style="margin-bottom: 14px;">HTML & JavaScript</span>
           <h3 style="font-size: 1.05rem;">Frontend</h3>
-          <p>Foundational front-end practice — markup, layout, and styling fundamentals.</p>
+          <p>Foundational front-end practice: markup, layout, and styling fundamentals.</p>
         </a>
         <a class="card reveal reveal-delay-1" href="https://github.com/Alishba-Tanveer/cp-week-3" target="_blank" rel="noopener">
           <span class="pill" style="margin-bottom: 14px;">TypeScript</span>
@@ -173,7 +225,7 @@ Projects I took the whole way to done, and the code I write between them.
         <a class="card reveal reveal-delay-2" href="https://github.com/Alishba-Tanveer/cp-week-2" target="_blank" rel="noopener">
           <span class="pill" style="margin-bottom: 14px;">TypeScript</span>
           <h3 style="font-size: 1.05rem;">cp-week-2</h3>
-          <p>Moving a codebase toward enterprise standards — strict typing, modular patterns, formatting, and QA workflows.</p>
+          <p>Moving a codebase toward enterprise standards: strict typing, modular patterns, formatting, and QA workflows.</p>
         </a>
       </div>
 
@@ -205,6 +257,11 @@ Projects I took the whole way to done, and the code I write between them.
     </div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <img src="" alt="" onclick="event.stopPropagation()" />
+</div>
 
 <script src="js/main.js"></script>
 </body>

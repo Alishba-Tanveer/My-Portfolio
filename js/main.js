@@ -39,6 +39,42 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((el) => el.classList.add("in"));
   }
 
+  /* Skill bars fill once they scroll into view */
+  const bars = document.querySelectorAll(".skill-fill");
+  if ("IntersectionObserver" in window && bars.length) {
+    const barIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            barIo.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    bars.forEach((el) => barIo.observe(el));
+  } else {
+    bars.forEach((el) => el.classList.add("in"));
+  }
+
+  /* Simple lightbox for gallery images */
+  const lightbox = document.querySelector("#lightbox");
+  if (lightbox) {
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll(".gallery-item img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add("open");
+      });
+    });
+    lightbox.addEventListener("click", () => lightbox.classList.remove("open"));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") lightbox.classList.remove("open");
+    });
+  }
+
   /* Contact form — submits to Formspree so messages actually land in
      Alishba's inbox, with no backend of her own required. A local copy
      is also kept so the admin panel can show recent enquiries. */

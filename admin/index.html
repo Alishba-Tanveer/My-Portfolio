@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Admin — Alishba Tanveer</title>
+<title>Admin | Alishba Tanveer</title>
 <meta name="robots" content="noindex, nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 <link rel="stylesheet" href="../css/style.css" />
 <style>
   .lock-screen {
@@ -46,7 +47,7 @@
     <div class="eyebrow">Admin panel</div>
     <h2 style="font-size:1.4rem;">Enter password</h2>
     <p style="font-size:0.88rem;">
-      This is a client-side demo gate for local/private use — see the note
+      This is a client-side demo gate for local/private use. See the note
       at the bottom of the panel about what a production version needs.
     </p>
     <input id="pw" type="password" placeholder="Password" autocomplete="current-password" />
@@ -59,7 +60,7 @@
 <div id="admin-panel">
   <header class="site-header">
     <div class="wrap">
-      <a href="../index.html" class="brand"><span class="dot"></span>Alishba Tanveer — Admin</a>
+      <a href="../index.html" class="brand"><i class="fa-solid fa-code" style="color: var(--orange);"></i>Alishba Tanveer | Admin</a>
       <button id="lock-btn" class="btn btn-ghost">Lock panel</button>
     </div>
   </header>
@@ -79,7 +80,7 @@
         <div class="card">
           <h3 style="font-size: 1.05rem;">Recent enquiries</h3>
           <div id="messages"></div>
-          <p id="no-messages" style="display:none; font-size:0.9rem;">No messages yet — they'll appear here after someone submits the contact form on this browser.</p>
+          <p id="no-messages" style="display:none; font-size:0.9rem;">No messages yet. They'll appear here after someone submits the contact form on this browser.</p>
         </div>
 
         <div class="card">
@@ -104,7 +105,7 @@
             the data you see here live entirely in this browser's
             <code>localStorage</code>, not on a server. That means it's
             fine for previewing the idea locally, but it is <strong>not
-            secure</strong> — anyone with browser dev tools can bypass the
+            secure</strong>. Anyone with browser dev tools can bypass the
             password, and messages don't sync between devices or visitors.
             A real password-protected admin panel needs a backend (an API
             with proper authentication, like the Node.js + JWT setup used
