@@ -48,7 +48,7 @@
   <!-- CERTIFICATE FEATURE -->
   <section style="padding-top: 0;">
     <div class="wrap">
-      <div class="card reveal" style="display:grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center; padding: 32px;">
+      <div class="card reveal split-grid" style="--split: 1fr 1.1fr; align-items: center; padding: 32px;">
         <div>
           <div class="eyebrow">2026</div>
           <h3 style="font-size: 1.3rem;">AI Connect 2026: Certificate of Participation</h3>
@@ -108,5 +108,29 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- AI CHAT WIDGET -->
+<button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+  <i class="fa-solid fa-message icon-chat"></i>
+  <i class="fa-solid fa-xmark icon-close"></i>
+</button>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-header">
+    <img src="assets/alishba-photo.jpeg" alt="Alishba Tanveer" />
+    <div class="who">
+      <div class="name">Alishba's Assistant</div>
+      <div class="status">Portfolio AI &middot; Online</div>
+    </div>
+    <button id="chat-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="chat-body" class="chat-body"></div>
+  <form id="chat-form" class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Ask about Alishba..." autocomplete="off" />
+    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+  <div class="chat-footer-note">Powered by Alishba's Portfolio Assistant</div>
+</div>
+<script src="js/chat-widget.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "name": "alishba-portfolio-chat-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Secure serverless proxy that keeps the OpenAI API key server-side for the portfolio chat widget."
+}

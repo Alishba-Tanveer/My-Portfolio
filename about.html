@@ -75,7 +75,7 @@
         <div class="eyebrow">Toolkit</div>
         <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.4rem);">What I work with, end to end</h2>
       </div>
-      <div class="grid-3">
+      <div class="grid-3 skills-grid">
         <div class="card reveal">
           <h3 style="font-size: 1.05rem;">Frontend</h3>
           <div class="tag-row">
@@ -131,28 +131,28 @@
         <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.4rem);">How I got here</h2>
       </div>
       <div class="reveal">
-        <div style="display:flex; gap:20px; padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">Aug 2026 – Present</div>
+        <div class="timeline-row" style="padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
+          <div class="mono text-orange timeline-date">Aug 2026 – Present</div>
           <div><strong style="color:var(--text);">Web Development / MERN Intern at Coding Pixel</strong><p style="margin:6px 0 0; max-width: 85ch;">Working on web projects using JavaScript, TypeScript, React, Next.js and Tailwind CSS, plus PostgreSQL and TypeORM for data models, relationships, migrations and typed queries.</p></div>
         </div>
-        <div style="display:flex; gap:20px; padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">Jul 2026</div>
+        <div class="timeline-row" style="padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
+          <div class="mono text-orange timeline-date">Jul 2026</div>
           <div><strong style="color:var(--text);">B.S. in Computer Science, University of Lahore</strong><p style="margin:6px 0 0; max-width: 85ch;">Graduated with a final-year project built end to end: Shopsie, a full-stack shopping app.</p></div>
         </div>
-        <div style="display:flex; gap:20px; padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">Jun – Jul 2026</div>
+        <div class="timeline-row" style="padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
+          <div class="mono text-orange timeline-date">Jun – Jul 2026</div>
           <div><strong style="color:var(--text);">Web Development Intern at CodeAlpha</strong><p style="margin:6px 0 0; max-width: 85ch;">Developed and maintained web applications with modern frontend and backend technologies, and Git/GitHub workflows.</p></div>
         </div>
-        <div style="display:flex; gap:20px; padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">2025 – 2026</div>
+        <div class="timeline-row" style="padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
+          <div class="mono text-orange timeline-date">2025 – 2026</div>
           <div><strong style="color:var(--text);">Final-year project: Shopsie</strong><p style="margin:6px 0 0; max-width: 85ch;">Designed and built a React Native mobile app across four user roles, with real-time data via Prisma and location APIs.</p></div>
         </div>
-        <div style="display:flex; gap:20px; padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">May 2025</div>
+        <div class="timeline-row" style="padding: 20px 0; border-bottom: 1px solid var(--border-soft);">
+          <div class="mono text-orange timeline-date">May 2025</div>
           <div><strong style="color:var(--text);">React e-commerce project, University of Lahore</strong><p style="margin:6px 0 0; max-width: 85ch;">Built a React-based e-commerce application with authentication, cart management, CRUD functionality, and Firebase/Firestore integration.</p></div>
         </div>
-        <div style="display:flex; gap:20px; padding: 20px 0;">
-          <div class="mono text-orange" style="width: 130px; flex-shrink:0; font-size: 0.85rem;">2023 – 2024</div>
+        <div class="timeline-row" style="padding: 20px 0;">
+          <div class="mono text-orange timeline-date">2023 – 2024</div>
           <div><strong style="color:var(--text);">Freelancing</strong><p style="margin:6px 0 0; max-width: 85ch;">Built modern, accessible web pages using HTML/CSS, Flexbox and Grid for client and personal projects.</p></div>
         </div>
       </div>
@@ -174,5 +174,29 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- AI CHAT WIDGET -->
+<button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+  <i class="fa-solid fa-message icon-chat"></i>
+  <i class="fa-solid fa-xmark icon-close"></i>
+</button>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-header">
+    <img src="assets/alishba-photo.jpeg" alt="Alishba Tanveer" />
+    <div class="who">
+      <div class="name">Alishba's Assistant</div>
+      <div class="status">Portfolio AI &middot; Online</div>
+    </div>
+    <button id="chat-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="chat-body" class="chat-body"></div>
+  <form id="chat-form" class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Ask about Alishba..." autocomplete="off" />
+    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+  <div class="chat-footer-note">Powered by Alishba's Portfolio Assistant</div>
+</div>
+<script src="js/chat-widget.js"></script>
+
 </body>
 </html>

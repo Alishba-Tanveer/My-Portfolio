@@ -94,7 +94,7 @@
         <div class="eyebrow">Process</div>
         <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.4rem);">How a project usually goes</h2>
       </div>
-      <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="grid-3">
         <div class="reveal">
           <h3 style="font-size: 1.05rem;">1. Understand the problem</h3>
           <p>What the product needs to do, for whom, and what "done" actually looks like before any code gets written.</p>
@@ -135,5 +135,29 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- AI CHAT WIDGET -->
+<button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+  <i class="fa-solid fa-message icon-chat"></i>
+  <i class="fa-solid fa-xmark icon-close"></i>
+</button>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-header">
+    <img src="assets/alishba-photo.jpeg" alt="Alishba Tanveer" />
+    <div class="who">
+      <div class="name">Alishba's Assistant</div>
+      <div class="status">Portfolio AI &middot; Online</div>
+    </div>
+    <button id="chat-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="chat-body" class="chat-body"></div>
+  <form id="chat-form" class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Ask about Alishba..." autocomplete="off" />
+    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+  <div class="chat-footer-note">Powered by Alishba's Portfolio Assistant</div>
+</div>
+<script src="js/chat-widget.js"></script>
+
 </body>
 </html>

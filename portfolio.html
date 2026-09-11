@@ -87,7 +87,7 @@ Projects I took the whole way to done, and the code I write between them.
         <hr class="hairline" style="margin: 36px 0;" />
 
         <h3 style="font-size: 1.05rem; color: var(--text); margin-bottom: 18px;">How each role uses it</h3>
-        <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="grid-3">
           <div>
             <p class="mono" style="color: var(--orange); font-size: 0.8rem; margin-bottom: 6px;">Customer</p>
             <p>Builds a shopping list, discovers nearby shops carrying those items, and compares prices before heading out.</p>
@@ -211,7 +211,7 @@ Projects I took the whole way to done, and the code I write between them.
         <p>Ongoing coursework and internship sprints covering React Hooks, TypeScript, Tailwind, and moving codebases from prototype toward production-grade standards.</p>
       </div>
 
-      <div class="grid-3" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="grid-3">
         <a class="card reveal" href="https://github.com/Alishba-Tanveer/Frontend" target="_blank" rel="noopener">
           <span class="pill" style="margin-bottom: 14px;">HTML & JavaScript</span>
           <h3 style="font-size: 1.05rem;">Frontend</h3>
@@ -264,5 +264,29 @@ Projects I took the whole way to done, and the code I write between them.
 </div>
 
 <script src="js/main.js"></script>
+
+<!-- AI CHAT WIDGET -->
+<button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+  <i class="fa-solid fa-message icon-chat"></i>
+  <i class="fa-solid fa-xmark icon-close"></i>
+</button>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-header">
+    <img src="assets/alishba-photo.jpeg" alt="Alishba Tanveer" />
+    <div class="who">
+      <div class="name">Alishba's Assistant</div>
+      <div class="status">Portfolio AI &middot; Online</div>
+    </div>
+    <button id="chat-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="chat-body" class="chat-body"></div>
+  <form id="chat-form" class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Ask about Alishba..." autocomplete="off" />
+    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+  <div class="chat-footer-note">Powered by Alishba's Portfolio Assistant</div>
+</div>
+<script src="js/chat-widget.js"></script>
+
 </body>
 </html>
